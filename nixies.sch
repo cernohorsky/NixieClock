@@ -1,0 +1,503 @@
+EESchema Schematic File Version 4
+LIBS:NixieClock01A-cache
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 2 2
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L NixieClock01A-rescue:ZM1080-mynixies N?
+U 1 1 5CC9D89D
+P 1525 1275
+AR Path="/5CC9D89D" Ref="N?"  Part="1" 
+AR Path="/5CC9D2A3/5CC9D89D" Ref="N7"  Part="1" 
+F 0 "N7" V 1575 572 45  0000 R CNN
+F 1 "ZM1080" H 1525 1275 45  0001 L BNN
+F 2 "riske-lib:ZM1080" H 1555 1425 20  0001 C CNN
+F 3 "" H 1525 1275 50  0001 C CNN
+	1    1525 1275
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	1025 1575 1025 1625
+Text Label 1925 825  0    50   ~ 0
+Uanode
+NoConn ~ 1925 875 
+NoConn ~ 1025 875 
+$Comp
+L NixieClock01A-rescue:R-Device R?
+U 1 1 5CC9D8A8
+P 1725 825
+AR Path="/5CC9D8A8" Ref="R?"  Part="1" 
+AR Path="/5CC9D2A3/5CC9D8A8" Ref="R40"  Part="1" 
+F 0 "R40" V 1518 825 50  0000 C CNN
+F 1 "27k" V 1609 825 50  0000 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric" V 1655 825 50  0001 C CNN
+F 3 "~" H 1725 825 50  0001 C CNN
+	1    1725 825 
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1925 825  1875 825 
+Wire Wire Line
+	1575 825  1525 825 
+Wire Wire Line
+	1525 825  1525 875 
+$Comp
+L device:Q_NPN_BEC Q?
+U 1 1 5CC9D8B2
+P 925 1825
+AR Path="/5CC9D8B2" Ref="Q?"  Part="1" 
+AR Path="/5CC9D2A3/5CC9D8B2" Ref="Q12"  Part="1" 
+F 0 "Q12" H 1116 1871 50  0000 L CNN
+F 1 "Q_NPN_BEC" H 1116 1780 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 1125 1925 50  0001 C CNN
+F 3 "" H 925 1825 50  0001 C CNN
+	1    925  1825
+	1    0    0    -1  
+$EndComp
+$Comp
+L NixieClock01A-rescue:R-Device R?
+U 1 1 5CC9D8B9
+P 725 2025
+AR Path="/5CC9D8B9" Ref="R?"  Part="1" 
+AR Path="/5CC9D2A3/5CC9D8B9" Ref="R20"  Part="1" 
+F 0 "R20" H 795 2071 50  0000 L CNN
+F 1 "100R" H 795 1980 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 655 2025 50  0001 C CNN
+F 3 "~" H 725 2025 50  0001 C CNN
+	1    725  2025
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	725  1825 725  1875
+$Comp
+L power:GND #PWR?
+U 1 1 5CC9D8C1
+P 1025 2050
+AR Path="/5CC9D8C1" Ref="#PWR?"  Part="1" 
+AR Path="/5CC9D2A3/5CC9D8C1" Ref="#PWR0111"  Part="1" 
+F 0 "#PWR0111" H 1025 1800 50  0001 C CNN
+F 1 "GND" H 1030 1877 50  0000 C CNN
+F 2 "" H 1025 2050 50  0001 C CNN
+F 3 "" H 1025 2050 50  0001 C CNN
+	1    1025 2050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1025 2025 1025 2050
+$Comp
+L device:Q_NPN_BEC Q?
+U 1 1 5CC9D8C8
+P 1025 2425
+AR Path="/5CC9D8C8" Ref="Q?"  Part="1" 
+AR Path="/5CC9D2A3/5CC9D8C8" Ref="Q13"  Part="1" 
+F 0 "Q13" H 1216 2471 50  0000 L CNN
+F 1 "Q_NPN_BEC" H 1216 2380 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 1225 2525 50  0001 C CNN
+F 3 "" H 1025 2425 50  0001 C CNN
+	1    1025 2425
+	1    0    0    -1  
+$EndComp
+$Comp
+L NixieClock01A-rescue:R-Device R?
+U 1 1 5CC9D8CF
+P 825 2625
+AR Path="/5CC9D8CF" Ref="R?"  Part="1" 
+AR Path="/5CC9D2A3/5CC9D8CF" Ref="R31"  Part="1" 
+F 0 "R31" H 895 2671 50  0000 L CNN
+F 1 "100R" H 895 2580 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 755 2625 50  0001 C CNN
+F 3 "~" H 825 2625 50  0001 C CNN
+	1    825  2625
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	825  2425 825  2475
+$Comp
+L power:GND #PWR?
+U 1 1 5CC9D8D7
+P 1125 2650
+AR Path="/5CC9D8D7" Ref="#PWR?"  Part="1" 
+AR Path="/5CC9D2A3/5CC9D8D7" Ref="#PWR0112"  Part="1" 
+F 0 "#PWR0112" H 1125 2400 50  0001 C CNN
+F 1 "GND" H 1130 2477 50  0000 C CNN
+F 2 "" H 1125 2650 50  0001 C CNN
+F 3 "" H 1125 2650 50  0001 C CNN
+	1    1125 2650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1125 2625 1125 2650
+$Comp
+L device:Q_NPN_BEC Q?
+U 1 1 5CC9D8DE
+P 1125 2975
+AR Path="/5CC9D8DE" Ref="Q?"  Part="1" 
+AR Path="/5CC9D2A3/5CC9D8DE" Ref="Q14"  Part="1" 
+F 0 "Q14" H 1316 3021 50  0000 L CNN
+F 1 "Q_NPN_BEC" H 1316 2930 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 1325 3075 50  0001 C CNN
+F 3 "" H 1125 2975 50  0001 C CNN
+	1    1125 2975
+	1    0    0    -1  
+$EndComp
+$Comp
+L NixieClock01A-rescue:R-Device R?
+U 1 1 5CC9D8E5
+P 925 3175
+AR Path="/5CC9D8E5" Ref="R?"  Part="1" 
+AR Path="/5CC9D2A3/5CC9D8E5" Ref="R32"  Part="1" 
+F 0 "R32" H 995 3221 50  0000 L CNN
+F 1 "100R" H 995 3130 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 855 3175 50  0001 C CNN
+F 3 "~" H 925 3175 50  0001 C CNN
+	1    925  3175
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	925  2975 925  3025
+$Comp
+L power:GND #PWR?
+U 1 1 5CC9D8ED
+P 1225 3200
+AR Path="/5CC9D8ED" Ref="#PWR?"  Part="1" 
+AR Path="/5CC9D2A3/5CC9D8ED" Ref="#PWR0113"  Part="1" 
+F 0 "#PWR0113" H 1225 2950 50  0001 C CNN
+F 1 "GND" H 1230 3027 50  0000 C CNN
+F 2 "" H 1225 3200 50  0001 C CNN
+F 3 "" H 1225 3200 50  0001 C CNN
+	1    1225 3200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1225 3175 1225 3200
+Wire Wire Line
+	1125 1575 1125 2225
+Wire Wire Line
+	1225 1575 1225 2775
+$Comp
+L device:Q_NPN_BEC Q?
+U 1 1 5CC9D8F6
+P 1225 3550
+AR Path="/5CC9D8F6" Ref="Q?"  Part="1" 
+AR Path="/5CC9D2A3/5CC9D8F6" Ref="Q15"  Part="1" 
+F 0 "Q15" H 1416 3596 50  0000 L CNN
+F 1 "Q_NPN_BEC" H 1416 3505 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 1425 3650 50  0001 C CNN
+F 3 "" H 1225 3550 50  0001 C CNN
+	1    1225 3550
+	1    0    0    -1  
+$EndComp
+$Comp
+L NixieClock01A-rescue:R-Device R?
+U 1 1 5CC9D8FD
+P 1025 3750
+AR Path="/5CC9D8FD" Ref="R?"  Part="1" 
+AR Path="/5CC9D2A3/5CC9D8FD" Ref="R33"  Part="1" 
+F 0 "R33" H 1095 3796 50  0000 L CNN
+F 1 "100R" H 1095 3705 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 955 3750 50  0001 C CNN
+F 3 "~" H 1025 3750 50  0001 C CNN
+	1    1025 3750
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	1025 3550 1025 3600
+$Comp
+L power:GND #PWR?
+U 1 1 5CC9D905
+P 1325 3775
+AR Path="/5CC9D905" Ref="#PWR?"  Part="1" 
+AR Path="/5CC9D2A3/5CC9D905" Ref="#PWR0114"  Part="1" 
+F 0 "#PWR0114" H 1325 3525 50  0001 C CNN
+F 1 "GND" H 1330 3602 50  0000 C CNN
+F 2 "" H 1325 3775 50  0001 C CNN
+F 3 "" H 1325 3775 50  0001 C CNN
+	1    1325 3775
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1325 3750 1325 3775
+Wire Wire Line
+	1325 1575 1325 3350
+$Comp
+L device:Q_NPN_BEC Q?
+U 1 1 5CC9D90D
+P 1325 4125
+AR Path="/5CC9D90D" Ref="Q?"  Part="1" 
+AR Path="/5CC9D2A3/5CC9D90D" Ref="Q16"  Part="1" 
+F 0 "Q16" H 1516 4171 50  0000 L CNN
+F 1 "Q_NPN_BEC" H 1516 4080 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 1525 4225 50  0001 C CNN
+F 3 "" H 1325 4125 50  0001 C CNN
+	1    1325 4125
+	1    0    0    -1  
+$EndComp
+$Comp
+L NixieClock01A-rescue:R-Device R?
+U 1 1 5CC9D914
+P 1125 4325
+AR Path="/5CC9D914" Ref="R?"  Part="1" 
+AR Path="/5CC9D2A3/5CC9D914" Ref="R34"  Part="1" 
+F 0 "R34" H 1195 4371 50  0000 L CNN
+F 1 "100R" H 1195 4280 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 1055 4325 50  0001 C CNN
+F 3 "~" H 1125 4325 50  0001 C CNN
+	1    1125 4325
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	1125 4125 1125 4175
+$Comp
+L power:GND #PWR?
+U 1 1 5CC9D91C
+P 1425 4350
+AR Path="/5CC9D91C" Ref="#PWR?"  Part="1" 
+AR Path="/5CC9D2A3/5CC9D91C" Ref="#PWR0115"  Part="1" 
+F 0 "#PWR0115" H 1425 4100 50  0001 C CNN
+F 1 "GND" H 1430 4177 50  0000 C CNN
+F 2 "" H 1425 4350 50  0001 C CNN
+F 3 "" H 1425 4350 50  0001 C CNN
+	1    1425 4350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1425 4325 1425 4350
+Wire Wire Line
+	1425 1575 1425 3925
+$Comp
+L device:Q_NPN_BEC Q?
+U 1 1 5CC9D924
+P 1425 4700
+AR Path="/5CC9D924" Ref="Q?"  Part="1" 
+AR Path="/5CC9D2A3/5CC9D924" Ref="Q17"  Part="1" 
+F 0 "Q17" H 1616 4746 50  0000 L CNN
+F 1 "Q_NPN_BEC" H 1616 4655 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 1625 4800 50  0001 C CNN
+F 3 "" H 1425 4700 50  0001 C CNN
+	1    1425 4700
+	1    0    0    -1  
+$EndComp
+$Comp
+L NixieClock01A-rescue:R-Device R?
+U 1 1 5CC9D92B
+P 1225 4900
+AR Path="/5CC9D92B" Ref="R?"  Part="1" 
+AR Path="/5CC9D2A3/5CC9D92B" Ref="R35"  Part="1" 
+F 0 "R35" H 1295 4946 50  0000 L CNN
+F 1 "100R" H 1295 4855 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 1155 4900 50  0001 C CNN
+F 3 "~" H 1225 4900 50  0001 C CNN
+	1    1225 4900
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	1225 4700 1225 4750
+$Comp
+L power:GND #PWR?
+U 1 1 5CC9D933
+P 1525 4925
+AR Path="/5CC9D933" Ref="#PWR?"  Part="1" 
+AR Path="/5CC9D2A3/5CC9D933" Ref="#PWR0116"  Part="1" 
+F 0 "#PWR0116" H 1525 4675 50  0001 C CNN
+F 1 "GND" H 1530 4752 50  0000 C CNN
+F 2 "" H 1525 4925 50  0001 C CNN
+F 3 "" H 1525 4925 50  0001 C CNN
+	1    1525 4925
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1525 4900 1525 4925
+Wire Wire Line
+	1525 1575 1525 4500
+$Comp
+L device:Q_NPN_BEC Q?
+U 1 1 5CC9D93B
+P 1525 5275
+AR Path="/5CC9D93B" Ref="Q?"  Part="1" 
+AR Path="/5CC9D2A3/5CC9D93B" Ref="Q18"  Part="1" 
+F 0 "Q18" H 1716 5321 50  0000 L CNN
+F 1 "Q_NPN_BEC" H 1716 5230 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 1725 5375 50  0001 C CNN
+F 3 "" H 1525 5275 50  0001 C CNN
+	1    1525 5275
+	1    0    0    -1  
+$EndComp
+$Comp
+L NixieClock01A-rescue:R-Device R?
+U 1 1 5CC9D942
+P 1325 5475
+AR Path="/5CC9D942" Ref="R?"  Part="1" 
+AR Path="/5CC9D2A3/5CC9D942" Ref="R36"  Part="1" 
+F 0 "R36" H 1395 5521 50  0000 L CNN
+F 1 "100R" H 1395 5430 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 1255 5475 50  0001 C CNN
+F 3 "~" H 1325 5475 50  0001 C CNN
+	1    1325 5475
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	1325 5275 1325 5325
+$Comp
+L power:GND #PWR?
+U 1 1 5CC9D94A
+P 1625 5500
+AR Path="/5CC9D94A" Ref="#PWR?"  Part="1" 
+AR Path="/5CC9D2A3/5CC9D94A" Ref="#PWR0117"  Part="1" 
+F 0 "#PWR0117" H 1625 5250 50  0001 C CNN
+F 1 "GND" H 1630 5327 50  0000 C CNN
+F 2 "" H 1625 5500 50  0001 C CNN
+F 3 "" H 1625 5500 50  0001 C CNN
+	1    1625 5500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1625 5475 1625 5500
+Wire Wire Line
+	1625 1575 1625 5075
+$Comp
+L device:Q_NPN_BEC Q?
+U 1 1 5CC9D952
+P 1625 5850
+AR Path="/5CC9D952" Ref="Q?"  Part="1" 
+AR Path="/5CC9D2A3/5CC9D952" Ref="Q19"  Part="1" 
+F 0 "Q19" H 1816 5896 50  0000 L CNN
+F 1 "Q_NPN_BEC" H 1816 5805 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 1825 5950 50  0001 C CNN
+F 3 "" H 1625 5850 50  0001 C CNN
+	1    1625 5850
+	1    0    0    -1  
+$EndComp
+$Comp
+L NixieClock01A-rescue:R-Device R?
+U 1 1 5CC9D959
+P 1425 6050
+AR Path="/5CC9D959" Ref="R?"  Part="1" 
+AR Path="/5CC9D2A3/5CC9D959" Ref="R37"  Part="1" 
+F 0 "R37" H 1495 6096 50  0000 L CNN
+F 1 "100R" H 1495 6005 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 1355 6050 50  0001 C CNN
+F 3 "~" H 1425 6050 50  0001 C CNN
+	1    1425 6050
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	1425 5850 1425 5900
+$Comp
+L power:GND #PWR?
+U 1 1 5CC9D961
+P 1725 6075
+AR Path="/5CC9D961" Ref="#PWR?"  Part="1" 
+AR Path="/5CC9D2A3/5CC9D961" Ref="#PWR0118"  Part="1" 
+F 0 "#PWR0118" H 1725 5825 50  0001 C CNN
+F 1 "GND" H 1730 5902 50  0000 C CNN
+F 2 "" H 1725 6075 50  0001 C CNN
+F 3 "" H 1725 6075 50  0001 C CNN
+	1    1725 6075
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1725 6050 1725 6075
+Wire Wire Line
+	1725 1575 1725 5650
+$Comp
+L device:Q_NPN_BEC Q?
+U 1 1 5CC9D969
+P 1725 6425
+AR Path="/5CC9D969" Ref="Q?"  Part="1" 
+AR Path="/5CC9D2A3/5CC9D969" Ref="Q20"  Part="1" 
+F 0 "Q20" H 1916 6471 50  0000 L CNN
+F 1 "Q_NPN_BEC" H 1916 6380 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 1925 6525 50  0001 C CNN
+F 3 "" H 1725 6425 50  0001 C CNN
+	1    1725 6425
+	1    0    0    -1  
+$EndComp
+$Comp
+L NixieClock01A-rescue:R-Device R?
+U 1 1 5CC9D970
+P 1525 6625
+AR Path="/5CC9D970" Ref="R?"  Part="1" 
+AR Path="/5CC9D2A3/5CC9D970" Ref="R38"  Part="1" 
+F 0 "R38" H 1595 6671 50  0000 L CNN
+F 1 "100R" H 1595 6580 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 1455 6625 50  0001 C CNN
+F 3 "~" H 1525 6625 50  0001 C CNN
+	1    1525 6625
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	1525 6425 1525 6475
+$Comp
+L power:GND #PWR?
+U 1 1 5CC9D978
+P 1825 6650
+AR Path="/5CC9D978" Ref="#PWR?"  Part="1" 
+AR Path="/5CC9D2A3/5CC9D978" Ref="#PWR0119"  Part="1" 
+F 0 "#PWR0119" H 1825 6400 50  0001 C CNN
+F 1 "GND" H 1830 6477 50  0000 C CNN
+F 2 "" H 1825 6650 50  0001 C CNN
+F 3 "" H 1825 6650 50  0001 C CNN
+	1    1825 6650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1825 6625 1825 6650
+Wire Wire Line
+	1825 1575 1825 6225
+$Comp
+L device:Q_NPN_BEC Q?
+U 1 1 5CC9D980
+P 1825 7000
+AR Path="/5CC9D980" Ref="Q?"  Part="1" 
+AR Path="/5CC9D2A3/5CC9D980" Ref="Q21"  Part="1" 
+F 0 "Q21" H 2016 7046 50  0000 L CNN
+F 1 "Q_NPN_BEC" H 2016 6955 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 2025 7100 50  0001 C CNN
+F 3 "" H 1825 7000 50  0001 C CNN
+	1    1825 7000
+	1    0    0    -1  
+$EndComp
+$Comp
+L NixieClock01A-rescue:R-Device R?
+U 1 1 5CC9D987
+P 1625 7200
+AR Path="/5CC9D987" Ref="R?"  Part="1" 
+AR Path="/5CC9D2A3/5CC9D987" Ref="R39"  Part="1" 
+F 0 "R39" H 1695 7246 50  0000 L CNN
+F 1 "100R" H 1695 7155 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 1555 7200 50  0001 C CNN
+F 3 "~" H 1625 7200 50  0001 C CNN
+	1    1625 7200
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	1625 7000 1625 7050
+$Comp
+L power:GND #PWR?
+U 1 1 5CC9D98F
+P 1925 7225
+AR Path="/5CC9D98F" Ref="#PWR?"  Part="1" 
+AR Path="/5CC9D2A3/5CC9D98F" Ref="#PWR0120"  Part="1" 
+F 0 "#PWR0120" H 1925 6975 50  0001 C CNN
+F 1 "GND" H 1930 7052 50  0000 C CNN
+F 2 "" H 1925 7225 50  0001 C CNN
+F 3 "" H 1925 7225 50  0001 C CNN
+	1    1925 7225
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1925 7200 1925 7225
+Wire Wire Line
+	1925 1575 1925 6800
+$EndSCHEMATC
