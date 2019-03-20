@@ -447,8 +447,6 @@ Wire Wire Line
 	3400 2625 3400 2675
 Wire Wire Line
 	2500 2625 2500 2675
-Text Label 5500 2275 0    50   ~ 0
-Uanode
 Text Label 2550 3325 0    50   ~ 0
 Uanode
 Wire Wire Line
@@ -650,17 +648,6 @@ Connection ~ 10700 6025
 Wire Wire Line
 	10700 6025 10700 6075
 $Comp
-L power:+5V #PWR0202
-U 1 1 5B5AA1D2
-P 1200 975
-F 0 "#PWR0202" H 1200 825 50  0001 C CNN
-F 1 "+5V" H 1215 1148 50  0000 C CNN
-F 2 "" H 1200 975 50  0001 C CNN
-F 3 "" H 1200 975 50  0001 C CNN
-	1    1200 975 
-	1    0    0    -1  
-$EndComp
-$Comp
 L power:VCC #PWR0204
 U 1 1 5B5AA546
 P 1500 975
@@ -671,10 +658,6 @@ F 3 "" H 1500 975 50  0001 C CNN
 	1    1500 975 
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	1200 975  1200 1025
-Wire Wire Line
-	1200 1025 1500 1025
 Wire Wire Line
 	1500 1025 1500 975 
 $Comp
@@ -690,9 +673,6 @@ F 3 "~" H 1050 975 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	1050 975  1050 1025
-Wire Wire Line
-	1050 1025 1200 1025
-Connection ~ 1200 1025
 Wire Wire Line
 	3350 2425 3400 2425
 Wire Wire Line
@@ -872,7 +852,7 @@ U 1 1 5C92D958
 P 10500 1225
 F 0 "J1" H 10580 1217 50  0000 L CNN
 F 1 "Conn_01x10" H 10580 1126 50  0000 L CNN
-F 2 "Connector_PinSocket_2.54mm:PinSocket_1x10_P2.54mm_Vertical" H 10500 1225 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical" H 10500 1225 50  0001 C CNN
 F 3 "~" H 10500 1225 50  0001 C CNN
 	1    10500 1225
 	1    0    0    -1  
@@ -901,7 +881,7 @@ U 1 1 5C9317C0
 P 10500 2200
 F 0 "J14" H 10580 2192 50  0000 L CNN
 F 1 "Conn_01x08" H 10580 2101 50  0000 L CNN
-F 2 "Connector_PinSocket_2.54mm:PinSocket_1x08_P2.54mm_Vertical" H 10500 2200 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x08_P2.54mm_Vertical" H 10500 2200 50  0001 C CNN
 F 3 "~" H 10500 2200 50  0001 C CNN
 	1    10500 2200
 	1    0    0    -1  
@@ -1109,7 +1089,7 @@ U 1 1 5C99234A
 P 10500 3050
 F 0 "J15" H 10580 3042 50  0000 L CNN
 F 1 "Conn_01x08" H 10580 2951 50  0000 L CNN
-F 2 "Connector_PinSocket_2.54mm:PinSocket_1x08_P2.54mm_Vertical" H 10500 3050 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x08_P2.54mm_Vertical" H 10500 3050 50  0001 C CNN
 F 3 "~" H 10500 3050 50  0001 C CNN
 	1    10500 3050
 	1    0    0    -1  
@@ -1120,7 +1100,7 @@ U 1 1 5C9924E0
 P 8900 3025
 F 0 "J4" H 8980 3017 50  0000 L CNN
 F 1 "Conn_01x08" H 8980 2926 50  0000 L CNN
-F 2 "Connector_PinSocket_2.54mm:PinSocket_1x08_P2.54mm_Vertical" H 8900 3025 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x08_P2.54mm_Vertical" H 8900 3025 50  0001 C CNN
 F 3 "~" H 8900 3025 50  0001 C CNN
 	1    8900 3025
 	1    0    0    -1  
@@ -1131,7 +1111,7 @@ U 1 1 5C99259A
 P 8900 2175
 F 0 "J3" H 8980 2167 50  0000 L CNN
 F 1 "Conn_01x08" H 8980 2076 50  0000 L CNN
-F 2 "Connector_PinSocket_2.54mm:PinSocket_1x08_P2.54mm_Vertical" H 8900 2175 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x08_P2.54mm_Vertical" H 8900 2175 50  0001 C CNN
 F 3 "~" H 8900 2175 50  0001 C CNN
 	1    8900 2175
 	1    0    0    -1  
@@ -1142,7 +1122,7 @@ U 1 1 5C992654
 P 8900 1325
 F 0 "J2" H 8980 1317 50  0000 L CNN
 F 1 "Conn_01x08" H 8980 1226 50  0000 L CNN
-F 2 "Connector_PinSocket_2.54mm:PinSocket_1x08_P2.54mm_Vertical" H 8900 1325 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x08_P2.54mm_Vertical" H 8900 1325 50  0001 C CNN
 F 3 "~" H 8900 1325 50  0001 C CNN
 	1    8900 1325
 	1    0    0    -1  
@@ -1236,4 +1216,8 @@ Wire Wire Line
 Connection ~ 8650 1525
 Text Notes 9650 2975 1    128  ~ 0
 Arduino Mega
+Wire Wire Line
+	1050 1025 1500 1025
+Text GLabel 5500 2275 2    50   Input ~ 0
+Uanode
 $EndSCHEMATC
