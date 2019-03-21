@@ -1,3 +1,0 @@
-(fp_lib_table
-  (lib (name MEGA2560_Rev3e)(type KiCad)(uri "$(KIPRJMOD)/MEGA2560_Rev3e.pretty")(options "")(descr ""))
-)
