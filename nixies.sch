@@ -3019,25 +3019,25 @@ F 3 "" H 1625 1175 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 Text GLabel 1125 3800 0    50   Input ~ 0
-10
-Text GLabel 1225 4375 0    50   Input ~ 0
-9
-Text GLabel 1325 4950 0    50   Input ~ 0
-8
-Text GLabel 1425 5525 0    50   Input ~ 0
 7
-Text GLabel 1525 6100 0    50   Input ~ 0
+Text GLabel 1225 4375 0    50   Input ~ 0
 6
-Text GLabel 1625 6675 0    50   Input ~ 0
+Text GLabel 1325 4950 0    50   Input ~ 0
 5
-Text GLabel 1725 7250 0    50   Input ~ 0
+Text GLabel 1425 5525 0    50   Input ~ 0
 4
+Text GLabel 1525 6100 0    50   Input ~ 0
+3
+Text GLabel 1625 6675 0    50   Input ~ 0
+2
+Text GLabel 1725 7250 0    50   Input ~ 0
+1
 Text GLabel 1025 3225 0    50   Input ~ 0
-11
+8
 Text GLabel 925  2675 0    50   Input ~ 0
-12
+9
 Text GLabel 825  2075 0    50   Input ~ 0
-13
+10
 Text GLabel 2025 725  2    50   Input ~ 0
 Uanode
 Text GLabel 3700 725  2    50   Input ~ 0
