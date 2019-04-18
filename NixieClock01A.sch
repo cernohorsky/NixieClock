@@ -1530,6 +1530,6 @@ Text GLabel 8950 1375 0    50   Input ~ 0
 12
 Text GLabel 10025 1375 0    50   Input ~ 0
 11
-Text Notes 850  1225 0    128  ~ 0
-ToDo:\nLM3478 - Wrong footprint!\nL1-Smaller inductor?
+Text Notes 700  1375 0    128  ~ 0
+ToDo:\nLM3478 - Wrong footprint!\nChange DCDC convertor circuit based on: \nNixie_Clock_Shield_NCS314_v2.2.pdf
 $EndSCHEMATC
