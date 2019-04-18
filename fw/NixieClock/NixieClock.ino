@@ -7,19 +7,18 @@ Nixie Clock
 
 RTC_DS3231 rtc;
 
-char daysOfTheWeek[7][12] = {"Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"};
-
-
 int digit1[]={A10,A11,A12,A13,A14,A15,52,53,50,51};
 int digit2[]={A0,A1,A2,A3,A4,A5,A6,A7,A8,A9};
 int digit3[]={48,49,46,47,44,45,42,43,40,41};
 int digit4[]={38,39,36,37,34,35,32,33,30,31};
-int digit5[]={28,29,26,27,24,25,22,23,21,20};
-int digit6[]={10,9,8,7,6,5,4,3,2,1};
+int digit5[]={28,29,26,27,24,25,22,23,0,0};
+int digit6[]={10,9,8,7,6,5,4,3,2,0};
 
 
 void setup() {  
-  for (int i=0;i<=9;i++) {
+  Serial.begin(115200);
+  
+  for (int i=0;i<=9;i++) {    
     pinMode(digit1[i], OUTPUT);  
     pinMode(digit2[i], OUTPUT);  
     pinMode(digit3[i], OUTPUT);  
@@ -32,44 +31,65 @@ void setup() {
     digitalWrite(digit3[i], LOW);
     digitalWrite(digit4[i], LOW);
     digitalWrite(digit5[i], LOW);
-    digitalWrite(digit6[i], LOW);
+    digitalWrite(digit6[i], LOW);    
   }
-  rtc.begin();
-/*
-  Serial.begin(115200);
 
-  delay(3000); // wait for console opening
-
+  for (int i=0;i<=9;i++) {    
+    digitalWrite(digit1[i], HIGH);   
+    digitalWrite(digit2[i], HIGH);   
+    digitalWrite(digit3[i], HIGH);   
+    digitalWrite(digit4[i], HIGH);   
+    digitalWrite(digit5[i], HIGH);   
+    digitalWrite(digit6[i], HIGH);   
+    delay(200);                       
+    
+    digitalWrite(digit1[i], LOW);
+    digitalWrite(digit2[i], LOW);
+    digitalWrite(digit3[i], LOW);
+    digitalWrite(digit4[i], LOW);
+    digitalWrite(digit5[i], LOW);
+    digitalWrite(digit6[i], LOW);
+  }  
+  
   if (! rtc.begin()) {
     Serial.println("Couldn't find RTC");
     while (1);
   }
-
+  
+  rtc.adjust(DateTime(2019, 4, 18, 10, 28, 00));
+  
   if (rtc.lostPower()) {
     Serial.println("RTC lost power, lets set the time!");
     // following line sets the RTC to the date & time this sketch was compiled
-    rtc.adjust(DateTime(F(__DATE__), F(__TIME__)));
+    rtc.adjust(DateTime(F(__DATE__), F(__TIME__)));    
+    
     // This line sets the RTC with an explicit date & time, for example to set
     // January 21, 2014 at 3am you would call:
-    // rtc.adjust(DateTime(2014, 1, 21, 3, 0, 0));
+     //rtc.adjust(DateTime(2019, 4, 18, 10, 19, 00));
   }
-  */
+  
 }
 
 void loop() {
   
-  //DateTime now = rtc.now();
-  /*      
+  DateTime now = rtc.now();            
     Serial.print(now.hour(), DEC);
     Serial.print(':');
     Serial.print(now.minute(), DEC);
     Serial.print(':');
-    Serial.print(now.second()%10, DEC);
+    Serial.print(now.second(), DEC);
     Serial.println();
-*/  
-int s=5;
-    digitalWrite(digit1[s], HIGH);   
-    delay(500);
+    
+
+    digitalWrite(digit1[now.second()%10], HIGH);   
+    digitalWrite(digit2[now.second()/10], HIGH);   
+
+    digitalWrite(digit3[now.minute()%10], HIGH);   
+    digitalWrite(digit4[now.minute()/10], HIGH);   
+
+    digitalWrite(digit5[now.hour()%10], HIGH);   
+    digitalWrite(digit6[now.hour()/10], HIGH);   
+    delay(100);
     
     
     
@@ -81,9 +101,9 @@ int s=5;
     digitalWrite(digit4[i], HIGH);   
     digitalWrite(digit5[i], HIGH);   
     digitalWrite(digit6[i], HIGH);   
-    delay(1000);                       
+    //delay(1000);                       
     */
-    //digitalWrite(digit1[i], LOW);
+    digitalWrite(digit1[i], LOW);
     digitalWrite(digit2[i], LOW);
     digitalWrite(digit3[i], LOW);
     digitalWrite(digit4[i], LOW);
@@ -92,5 +112,3 @@ int s=5;
   }  
   
 }
-
-
