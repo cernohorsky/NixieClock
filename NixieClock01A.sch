@@ -858,10 +858,6 @@ Text GLabel 10375 3375 0    50   Input ~ 0
 6
 Text GLabel 10375 3275 0    50   Input ~ 0
 7
-Text GLabel 10375 4825 0    50   Input ~ 0
-21
-Text GLabel 10375 4725 0    50   Input ~ 0
-20
 Text GLabel 8775 4800 0    50   Input ~ 0
 A15
 Text GLabel 8775 4700 0    50   Input ~ 0
@@ -1306,9 +1302,6 @@ NoConn ~ 8775 2500
 NoConn ~ 8775 2600
 NoConn ~ 8775 2700
 NoConn ~ 10375 3975
-NoConn ~ 10375 4125
-NoConn ~ 10375 4225
-NoConn ~ 10375 4325
 NoConn ~ 10375 4425
 NoConn ~ 10375 4525
 NoConn ~ 10375 4625
@@ -1372,8 +1365,6 @@ Text GLabel 10375 3675 0    50   Input ~ 0
 3
 Text GLabel 10375 3775 0    50   Input ~ 0
 2
-Text GLabel 10375 3875 0    50   Input ~ 0
-1
 $Comp
 L NixieClock01A-rescue:SW_Push-Switch SW1
 U 1 1 5C97920D
@@ -1532,4 +1523,13 @@ Text GLabel 10025 1375 0    50   Input ~ 0
 11
 Text Notes 700  1375 0    128  ~ 0
 ToDo:\nLM3478 - Wrong footprint!\nChange DCDC convertor circuit based on: \nNixie_Clock_Shield_NCS314_v2.2.pdf
+NoConn ~ 10375 3875
+Text GLabel 10375 4125 0    50   Input ~ 0
+14
+Text GLabel 10375 4225 0    50   Input ~ 0
+15
+Text GLabel 10375 4325 0    50   Input ~ 0
+16
+NoConn ~ 10375 4725
+NoConn ~ 10375 4825
 $EndSCHEMATC

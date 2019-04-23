@@ -2525,9 +2525,9 @@ Text GLabel 3100 5525 0    50   Input ~ 0
 Text GLabel 3200 6100 0    50   Input ~ 0
 22
 Text GLabel 3300 6675 0    50   Input ~ 0
-21
+16
 Text GLabel 3400 7250 0    50   Input ~ 0
-20
+15
 Text GLabel 2700 3225 0    50   Input ~ 0
 27
 Text GLabel 2600 2675 0    50   Input ~ 0
@@ -3031,7 +3031,7 @@ Text GLabel 1525 6100 0    50   Input ~ 0
 Text GLabel 1625 6675 0    50   Input ~ 0
 2
 Text GLabel 1725 7250 0    50   Input ~ 0
-1
+14
 Text GLabel 1025 3225 0    50   Input ~ 0
 8
 Text GLabel 925  2675 0    50   Input ~ 0

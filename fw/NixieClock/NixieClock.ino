@@ -7,11 +7,13 @@ Nixie Clock
 
 RTC_DS3231 rtc;
 
+int secondBefore = 0;
+
 int digit1[]={A10,A11,A12,A13,A14,A15,52,53,50,51};
 int digit2[]={A0,A1,A2,A3,A4,A5,A6,A7,A8,A9};
 int digit3[]={48,49,46,47,44,45,42,43,40,41};
 int digit4[]={38,39,36,37,34,35,32,33,30,31};
-int digit5[]={28,29,26,27,24,25,22,23,0,0};
+int digit5[]={28,29,26,27,24,25,22,23,15,14};
 int digit6[]={10,9,8,7,6,5,4,3,2,0};
 
 
@@ -32,23 +34,6 @@ void setup() {
     digitalWrite(digit4[i], LOW);
     digitalWrite(digit5[i], LOW);
     digitalWrite(digit6[i], LOW);    
-  }
-
-  for (int i=0;i<=9;i++) {    
-    digitalWrite(digit1[i], HIGH);   
-    digitalWrite(digit2[i], HIGH);   
-    digitalWrite(digit3[i], HIGH);   
-    digitalWrite(digit4[i], HIGH);   
-    digitalWrite(digit5[i], HIGH);   
-    digitalWrite(digit6[i], HIGH);   
-    delay(200);                       
-    
-    digitalWrite(digit1[i], LOW);
-    digitalWrite(digit2[i], LOW);
-    digitalWrite(digit3[i], LOW);
-    digitalWrite(digit4[i], LOW);
-    digitalWrite(digit5[i], LOW);
-    digitalWrite(digit6[i], LOW);
   }  
   
   if (! rtc.begin()) {
@@ -56,7 +41,8 @@ void setup() {
     while (1);
   }
   
-  rtc.adjust(DateTime(2019, 4, 18, 10, 28, 00));
+  //rtc.adjust(DateTime(2019, 4, 18, 12, 01, 00));
+  rtc.adjust(DateTime(F(__DATE__), F(__TIME__)));    
   
   if (rtc.lostPower()) {
     Serial.println("RTC lost power, lets set the time!");
@@ -73,42 +59,66 @@ void setup() {
 void loop() {
   
   DateTime now = rtc.now();            
+
+    /*
     Serial.print(now.hour(), DEC);
     Serial.print(':');
     Serial.print(now.minute(), DEC);
     Serial.print(':');
     Serial.print(now.second(), DEC);
-    Serial.println();
+    Serial.println();        
+*/
+    if (now.second()!= secondBefore) {
+      secondBefore = now.second();
+
+      for (int i=0;i<=9;i++) {
+        digitalWrite(digit1[i], LOW);
+        digitalWrite(digit2[i], LOW);
+        digitalWrite(digit3[i], LOW);
+        digitalWrite(digit4[i], LOW);
+        digitalWrite(digit5[i], LOW);
+        digitalWrite(digit6[i], LOW);
+      }  
     
+      digitalWrite(digit1[now.second()%10], HIGH);   
+      digitalWrite(digit2[now.second()/10], HIGH);   
+  
+      digitalWrite(digit3[now.minute()%10], HIGH);   
+      digitalWrite(digit4[now.minute()/10], HIGH);   
+  
+      digitalWrite(digit5[now.hour()%10], HIGH);   
+      digitalWrite(digit6[now.hour()/10], HIGH);     
+    }
 
-    digitalWrite(digit1[now.second()%10], HIGH);   
-    digitalWrite(digit2[now.second()/10], HIGH);   
-
-    digitalWrite(digit3[now.minute()%10], HIGH);   
-    digitalWrite(digit4[now.minute()/10], HIGH);   
-
-    digitalWrite(digit5[now.hour()%10], HIGH);   
-    digitalWrite(digit6[now.hour()/10], HIGH);   
+    if (now.second()==45) {
+        for (int i=0;i<=9;i++) {             
+          digitalWrite(digit1[i], LOW);
+          digitalWrite(digit2[i], LOW);
+          digitalWrite(digit3[i], LOW);
+          digitalWrite(digit4[i], LOW);
+          digitalWrite(digit5[i], LOW);
+          digitalWrite(digit6[i], LOW);    
+        } 
+  
+      for (int i=0;i<=9;i++) {    
+        digitalWrite(digit1[i], HIGH);   
+        digitalWrite(digit2[i], HIGH);   
+        digitalWrite(digit3[i], HIGH);   
+        digitalWrite(digit4[i], HIGH);   
+        digitalWrite(digit5[i], HIGH);   
+        digitalWrite(digit6[i], HIGH);   
+        delay(300);                       
+        
+        digitalWrite(digit1[i], LOW);
+        digitalWrite(digit2[i], LOW);
+        digitalWrite(digit3[i], LOW);
+        digitalWrite(digit4[i], LOW);
+        digitalWrite(digit5[i], LOW);
+        digitalWrite(digit6[i], LOW);
+      }  
+    }
     delay(100);
     
-    
-    
-  for (int i=0;i<=9;i++) {
-    /*
-    digitalWrite(digit1[i], HIGH);   
-    digitalWrite(digit2[i], HIGH);   
-    digitalWrite(digit3[i], HIGH);   
-    digitalWrite(digit4[i], HIGH);   
-    digitalWrite(digit5[i], HIGH);   
-    digitalWrite(digit6[i], HIGH);   
-    //delay(1000);                       
-    */
-    digitalWrite(digit1[i], LOW);
-    digitalWrite(digit2[i], LOW);
-    digitalWrite(digit3[i], LOW);
-    digitalWrite(digit4[i], LOW);
-    digitalWrite(digit5[i], LOW);
-    digitalWrite(digit6[i], LOW);
-  }  
+  
   
 }
