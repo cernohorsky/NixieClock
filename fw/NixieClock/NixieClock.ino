@@ -57,41 +57,21 @@ void setup() {
 }
 
 void loop() {
-  
+  //Read time from RTC
   DateTime now = rtc.now();            
 
-    /*
+    /* //UART debug
     Serial.print(now.hour(), DEC);
     Serial.print(':');
     Serial.print(now.minute(), DEC);
     Serial.print(':');
     Serial.print(now.second(), DEC);
     Serial.println();        
-*/
-    if (now.second()!= secondBefore) {
-      secondBefore = now.second();
-
-      for (int i=0;i<=9;i++) {
-        digitalWrite(digit1[i], LOW);
-        digitalWrite(digit2[i], LOW);
-        digitalWrite(digit3[i], LOW);
-        digitalWrite(digit4[i], LOW);
-        digitalWrite(digit5[i], LOW);
-        digitalWrite(digit6[i], LOW);
-      }  
+    */
     
-      digitalWrite(digit1[now.second()%10], HIGH);   
-      digitalWrite(digit2[now.second()/10], HIGH);   
-  
-      digitalWrite(digit3[now.minute()%10], HIGH);   
-      digitalWrite(digit4[now.minute()/10], HIGH);   
-  
-      digitalWrite(digit5[now.hour()%10], HIGH);   
-      digitalWrite(digit6[now.hour()/10], HIGH);     
-    }
-
-    if (now.second()==45) {
-        for (int i=0;i<=9;i++) {             
+    //Shutdown during night
+    if (now.hour()<7) {
+        for (int i=0;i<=9;i++) {    
           digitalWrite(digit1[i], LOW);
           digitalWrite(digit2[i], LOW);
           digitalWrite(digit3[i], LOW);
@@ -99,24 +79,63 @@ void loop() {
           digitalWrite(digit5[i], LOW);
           digitalWrite(digit6[i], LOW);    
         } 
+        delay(60000);
+    }
+    
+    else {
+      //Set actual time
+      if (now.second()!= secondBefore) {
+        secondBefore = now.second();
   
-      for (int i=0;i<=9;i++) {    
-        digitalWrite(digit1[i], HIGH);   
-        digitalWrite(digit2[i], HIGH);   
-        digitalWrite(digit3[i], HIGH);   
-        digitalWrite(digit4[i], HIGH);   
-        digitalWrite(digit5[i], HIGH);   
-        digitalWrite(digit6[i], HIGH);   
-        delay(300);                       
-        
-        digitalWrite(digit1[i], LOW);
-        digitalWrite(digit2[i], LOW);
-        digitalWrite(digit3[i], LOW);
-        digitalWrite(digit4[i], LOW);
-        digitalWrite(digit5[i], LOW);
-        digitalWrite(digit6[i], LOW);
+        for (int i=0;i<=9;i++) {
+          digitalWrite(digit1[i], LOW);
+          digitalWrite(digit2[i], LOW);
+          digitalWrite(digit3[i], LOW);
+          digitalWrite(digit4[i], LOW);
+          digitalWrite(digit5[i], LOW);
+          digitalWrite(digit6[i], LOW);
+        }  
+      
+        digitalWrite(digit1[now.second()%10], HIGH);   
+        digitalWrite(digit2[now.second()/10], HIGH);   
+    
+        digitalWrite(digit3[now.minute()%10], HIGH);   
+        digitalWrite(digit4[now.minute()/10], HIGH);   
+    
+        digitalWrite(digit5[now.hour()%10], HIGH);   
+        digitalWrite(digit6[now.hour()/10], HIGH);     
+      }
+
+      //Cycling numbers once per minute to prevent cathode poisoning
+      if (now.second()==45) {
+          for (int i=0;i<=9;i++) {             
+            digitalWrite(digit1[i], LOW);
+            digitalWrite(digit2[i], LOW);
+            digitalWrite(digit3[i], LOW);
+            digitalWrite(digit4[i], LOW);
+            digitalWrite(digit5[i], LOW);
+            digitalWrite(digit6[i], LOW);    
+          } 
+    
+        for (int i=0;i<=9;i++) {    
+          digitalWrite(digit1[i], HIGH);   
+          digitalWrite(digit2[i], HIGH);   
+          digitalWrite(digit3[i], HIGH);   
+          digitalWrite(digit4[i], HIGH);   
+          digitalWrite(digit5[i], HIGH);   
+          digitalWrite(digit6[i], HIGH);   
+          delay(300);                       
+          
+          digitalWrite(digit1[i], LOW);
+          digitalWrite(digit2[i], LOW);
+          digitalWrite(digit3[i], LOW);
+          digitalWrite(digit4[i], LOW);
+          digitalWrite(digit5[i], LOW);
+          digitalWrite(digit6[i], LOW);
+        }  
       }  
     }
+    
     delay(100);
     
   
