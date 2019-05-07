@@ -18,23 +18,7 @@ int digit6[]={10,9,8,7,6,5,4,3,2,0};
 
 
 void setup() {  
-  Serial.begin(115200);
-  
-  for (int i=0;i<=9;i++) {    
-    pinMode(digit1[i], OUTPUT);  
-    pinMode(digit2[i], OUTPUT);  
-    pinMode(digit3[i], OUTPUT);  
-    pinMode(digit4[i], OUTPUT);  
-    pinMode(digit5[i], OUTPUT);  
-    pinMode(digit6[i], OUTPUT);  
-
-    digitalWrite(digit1[i], LOW);
-    digitalWrite(digit2[i], LOW);
-    digitalWrite(digit3[i], LOW);
-    digitalWrite(digit4[i], LOW);
-    digitalWrite(digit5[i], LOW);
-    digitalWrite(digit6[i], LOW);    
-  }  
+  //Serial.begin(115200);      
   
   if (! rtc.begin()) {
     Serial.println("Couldn't find RTC");
@@ -52,6 +36,22 @@ void setup() {
     // This line sets the RTC with an explicit date & time, for example to set
     // January 21, 2014 at 3am you would call:
      //rtc.adjust(DateTime(2019, 4, 18, 10, 19, 00));
+  }
+
+  for (int i=0;i<=9;i++) {    
+    pinMode(digit1[i], OUTPUT);  
+    pinMode(digit2[i], OUTPUT);  
+    pinMode(digit3[i], OUTPUT);  
+    pinMode(digit4[i], OUTPUT);  
+    pinMode(digit5[i], OUTPUT);  
+    pinMode(digit6[i], OUTPUT);  
+
+    digitalWrite(digit1[i], LOW);
+    digitalWrite(digit2[i], LOW);
+    digitalWrite(digit3[i], LOW);
+    digitalWrite(digit4[i], LOW);
+    digitalWrite(digit5[i], LOW);
+    digitalWrite(digit6[i], LOW);    
   }
   
 }
